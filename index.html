@@ -1,35 +1,439 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Calender Assignment Javascript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <p class="current-date"></p>
-        <div class="icons">
-          <span id="prev" class="material-symbols-rounded">chevron_left</span>
-          <span id="next" class="material-symbols-rounded">chevron_right</span>
-        </div>
-      </header>
-      <div class="calendar">
-        <ul class="weeks">
-          <li>Sun</li>
-          <li>Mon</li>
-          <li>Tue</li>
-          <li>Wed</li>
-          <li>Thu</li>
-          <li>Fri</li>
-          <li>Sat</li>
-        </ul>
-        <ul class="days"></ul>
-      </div>
-    </div>
-    
-  </body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dan's Website</title>
+        <!--stylesheet-->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!---light--slider---css-->
+        <link rel="stylesheet" type="text/css" href="lightslider.css">
+         <!----jQuery---->
+         <script src="JQuery.js"></script>
+         <!-----light--slider-js-->
+         <script src="lightslider.js"></script>
+
+        <!--fav-emblem----->
+        <!-- <link rel="shortcut icon" href="pic.jpg"> -->
+        <!--using-FontAwesome-For-Icons---->
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <!--navigation--------->
+        <nav>
+            <!--social-link-and-phone-number--->
+            <div class="social-media">
+                <!--social-links---->
+                <div class="socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <!--phone-number----->
+                <div class="Telephone"></div>
+                <span><img src="phone.webp" id="call"> +234-809-112-3617</span>
+            </div>
+
+            <!---menu-bar--------------->
+            <div class="navigate">
+                <!--logo--------->
+                <a href="#" class="DANSAUTOS">
+                    <img src="1.png" alt="logo">
+                </a>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cart
+                    <!---number of products in carts-->
+                    <span class="num-cart-product">0</span> 
+                    </a>
+                    </li>
+
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+
+
+            </div>
+        </nav>
+        
+
+
+        <!-------Full-Slider---->
+
+        <ul id="adaptive" class="cs-hidden">
+            <!----box1----->
+            <li class="item-a">
+                <!--------box----->
+                <div class="full-slider-box f-slide-1">
+                    <!-------slider-text-container-->
+                    <div class="slider-text-container">
+        
+                    <div class="f-slider-text">
+                        <span>Special offer</span>
+                        <strong>30% off</strong>
+                        <a href="#" class="f-slider-btn">Buy Now</a>
+                    </div>
+        
+                    </div>
+                </div>
+
+            </li>
+
+            <!----box2----->
+            <li class="item-a">
+                <!--------box----->
+                <div class="full-slider-box f-slide-2">
+                    <!-------slider-text-container-->
+                    <div class="slider-text-container">
+        
+                    <div class="f-slider-text">
+                        <span>Special offer</span>
+                        <strong>30% off</strong>
+                        <a href="#" class="f-slider-btn">Buy Now</a>
+                    </div>
+        
+                    </div>
+                </div>
+
+            </li>
+
+            <!----box3----->
+            <li class="item-a">
+                <!--------box----->
+                <div class="full-slider-box f-slide-3">
+                    <!-------slider-text-container-->
+                    <div class="slider-text-container">
+        
+                    <div class="f-slider-text">
+                        <span>Special offer</span>
+                        <strong>30% off</strong>
+                        <a href="#" class="f-slider-btn">Buy Now</a>
+                    </div>
+        
+                    </div>
+                </div>
+
+
+            </li>
+            
+          </ul>
+
+          <!----Featured-Categories---->
+          <div class="feature-heading">
+            <h2>Brands</h2>
+          </div>
+
+          <ul id="autoWidth" class="cs-hidden">
+            <!----1---->
+            <li class="item">
+                <!---Featured-box------>
+          <div class="feature-box">
+            <a href="#">
+                <img src="pic2.jpg"/>
+            </a>
+          </div>
+          <!-----text---->
+          <span>BMW</span>
+            </li>
+            <!----2---->
+            <li class="item">
+                <!---Featured-box------>
+          <div class="feature-box">
+            <a href="#">
+                <img src="pic3.jpg"/>
+            </a>
+          </div>
+          <!-----text---->
+          <span>Ford</span>
+            </li>
+            <!----3---->
+            <li class="item">
+                <!---Featured-box------>
+          <div class="feature-box">
+            <a href="#">
+                <img src="pic4.jpg"/>
+            </a>
+          </div>
+          <!-----text---->
+          <span>Porsche</span>
+            </li>
+            <!----4---->
+            <li class="item">
+                <!---Featured-box------>
+          <div class="feature-box">
+            <a href="#">
+                <img src="pic5.jpg"/>
+            </a>
+          </div>
+          <!-----text---->
+          <span>Genesis</span>
+            </li>
+            <!----5---->
+            <li class="item">
+                <!---Featured-box------>
+          <div class="feature-box">
+            <a href="#">
+                <img src="pic6.jpg"/>
+            </a>
+          </div>
+          <!-----text---->
+          <span>Lexus</span>
+            </li>
+          </ul>
+
+          <!----newest-arrivals-->
+          <section class="new-arrival">
+            <!----heading---->
+            <div class="arrival-heading">
+                <strong>New Arrivals</strong>
+                <p>We Provide You With The Latest Luxury Cars In The Market</p>
+            </div>
+
+            <!---product-container----->
+            <div class="product-container">
+
+                <!-----product--box--1-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic7.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">BMW</a>
+                        <span class="prod-price">$200,000</span>
+                    </div>
+                </div>
+                
+
+                <!-----product--box--2-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic8.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">LINCOLN</a>
+                        <span class="prod-price">$150,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--3-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic9.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">CADILLAC</a>
+                        <span class="prod-price">$240,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--4-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic10.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">BMW</a>
+                        <span class="prod-price">$440,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--5-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic11.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">AUDI</a>
+                        <span class="prod-price">$500,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--6-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic12.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">BENTLEY</a>
+                        <span class="prod-price">$550,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--7-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic14.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">ROLLS-ROYCE</a>
+                        <span class="prod-price">$500,000</span>
+                    </div>
+                </div>
+
+                <!-----product--box--8-->
+                <div class="product-box">
+
+                    <!------picture-->
+                    <div class="product-pic">
+                         <!---add-cart----->
+                    <a href="#" class="add-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                        <img src="pic16.jpg"/>
+                    </div>
+
+                    <!-----details----->
+                    <div class="product-details">
+                        <a href="#" class="prod-name">ROLLS-ROYCE</a>
+                        <span class="prod-price">$560,000</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+          </section>
+
+          <!------seervices-->
+          <section class="services">
+            <!----services--box--1-------->
+            <div class="services-box">
+                <i class="fas fa-shipping-fast"></i>
+                <span>Free Shipping</span>
+                <p>Free Shipping For all PortHarcourt Orders</p>
+            </div>
+            <!----services--box--2-------->
+            <div class="services-box">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Support 24/7</span>
+                <p>We provide support 24hrs a day</p>
+            </div>
+            <!----services--box--3-------->
+            <div class="services-box">
+                <i class="fas fa-sync"></i>
+                <span>100% Money Back</span>
+                <p>You have 17 days to Return</p>
+            </div>
+
+          </section>
+
+          <!---footer--------->
+          <footer>
+            <!--copyright---------->
+            <span class="copyright">
+                Copyright 2022 - Dan's Autos
+            </span>
+          </footer>
+
+
+
+
+
+
+          
+
+
+
+
+
+
+        
+
+        
+       
+        <!-------script------>
+        <script type="text/JavaScript">
+
+        /*------full-slider-script----*/
+        $(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight:true,
+        auto:true,
+        item:1,
+        slideMargin:0,
+        loop:true
+    });
+});
+      /*-------Featured slider-------*/
+      $(document).ready(function(){
+        $('#autoWidth').lightSlider({
+            autoWidth:true,
+            loop:true,
+            onSliderLoad: function(){
+                $('#autoWidth').removeClass('cS-hidden');
+            }
+        })
+      })   
+
+      //for fix menu when scroll//
+      $(window).scroll(function(){
+        if($(document).scrollTop() > 50){
+            $('.navigation').addClass('fix-nav');
+        }
+        else{
+            $('.navigation').removeClass('fix-nav');
+        }
+      })
+       
+
+        </script>
+    </body>
 </html>
